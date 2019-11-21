@@ -308,7 +308,7 @@ public class CipherStorageKeystoreAESCBC implements CipherStorage {
             .setBlockModes(ENCRYPTION_BLOCK_MODE)
             .setEncryptionPaddings(ENCRYPTION_PADDING)
             .setRandomizedEncryptionRequired(true)
-            //.setUserAuthenticationRequired(true) // Will throw InvalidAlgorithmParameterException if there is no fingerprint enrolled on the device
+            .setUserAuthenticationRequired(true) // Will throw InvalidAlgorithmParameterException if there is no fingerprint enrolled on the device
             .setKeySize(ENCRYPTION_KEY_SIZE);
     }
 }
